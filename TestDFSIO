@@ -1,0 +1,16 @@
+TestDFSIO to test performance of Hadoop
+TestDFS在一个集群刚刚装完后，经常用于测试HDFS IO 的性能（磁盘，网络）。
+命令： 1000个map,每个map写入500MB数据：
+# hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.3-tests.jar TestDFSIO -write -nrFiles 1000 -fileSize 500MB
+结果：
+
+16/12/27 10:37:21 INFO fs.TestDFSIO: —– TestDFSIO —– : write 
+16/12/27 10:37:21 INFO fs.TestDFSIO: Date & time: Tue Dec 27 10:37:21 CST 2016 
+16/12/27 10:37:21 INFO fs.TestDFSIO: Number of files: 1000 
+16/12/27 10:37:21 INFO fs.TestDFSIO: Total MBytes processed: 500000.0 
+16/12/27 10:37:21 INFO fs.TestDFSIO: Throughput mb/sec: 19.075746508356282 
+16/12/27 10:37:21 INFO fs.TestDFSIO: Average IO rate mb/sec: 33.10749435424805 
+16/12/27 10:37:21 INFO fs.TestDFSIO: IO rate std deviation: 53.24997725209898 
+16/12/27 10:37:21 INFO fs.TestDFSIO: Test exec time sec: 724.434 
+16/12/27 10:37:21 INFO fs.TestDFSIO:
+
